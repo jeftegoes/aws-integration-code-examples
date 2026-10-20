@@ -1,10 +1,11 @@
 package com.example.services;
 
+import org.springframework.jms.annotation.JmsListener;
+import org.springframework.stereotype.Service;
+
 import jakarta.annotation.PostConstruct;
 import jakarta.jms.JMSException;
 import jakarta.jms.TextMessage;
-import org.springframework.jms.annotation.JmsListener;
-import org.springframework.stereotype.Service;
 
 @Service
 public class SqsService {
@@ -15,6 +16,6 @@ public class SqsService {
 
     @JmsListener(destination = "test-queue")
     public void pollMessages(TextMessage textMessage) throws JMSException {
-        System.out.println(textMessage.getText());
+        System.out.println("Received message: " + textMessage.getText());
     }
 }

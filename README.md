@@ -21,6 +21,7 @@
   - `cdk synth`
 - Deploy this stack to your default AWS account/region.
   - `cdk deploy`
+  - `cdk deploy --all`
 - Compare deployed stack with current state.
   - `cdk diff`
 - Open CDK documentation.
