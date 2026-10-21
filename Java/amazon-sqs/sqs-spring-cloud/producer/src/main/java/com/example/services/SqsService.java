@@ -1,12 +1,17 @@
 package com.example.services;
 
-import io.awspring.cloud.sqs.annotation.SqsListener;
+import io.awspring.cloud.sqs.operations.SqsTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class SqsService {
-    @SqsListener("test-queue")
-    public void pollMessages(String message) {
-        System.out.println("Received message: " + message);
+    @Autowired
+    private SqsTemplate sqsTemplate;
+
+    public void sendMessage(String message) {
+        sqsTemplate.send("test-queue", message);
+
+        System.out.println("Sending message: " + message);
     }
 }
