@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.0</version>
+        <version>4.1.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>systems-manager</artifactId>
+    <artifactId>s3-aws-sdk</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>systems-manager</name>
-    <description>Demo project for Spring Boot</description>
+    <name/>
+    <description/>
     <url/>
     <licenses>
         <license/>
@@ -27,7 +27,7 @@
         <url/>
     </scm>
     <properties>
-        <java.version>23</java.version>
+        <java.version>25</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -41,10 +41,10 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>software.amazon.awssdk</groupId>
-            <artifactId>ssm</artifactId>
-            <version>2.29.21</version>
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>s3</artifactId>
+            <version>2.57.0</version>
         </dependency>
     </dependencies>
 
